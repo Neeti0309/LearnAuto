@@ -6,3 +6,24 @@ Step 3-Check status again: //confirm the same file list shows up staged (green),
 git status
 Step 4 - commit
 git commit -m "Initial commit: SauceDemo Playwright framework with POM, fixtures, data-driven tests, and CI workflow"
+
+----------------------------------------------------------------------------------------------
+Step 1 — Create the repository on GitHub (in your browser, not the terminal)
+Go to github.com and log in.
+Click the + icon top-right → New repository.
+Name it something like LearnAuto (matching your project, good practice).
+Leave it set to whatever visibility you want (Public is fine for a portfolio piece — recruiters/interviewers can view it).
+Important: do NOT check "Add a README," "Add .gitignore," or "Add license." You already have all of that locally — checking those boxes creates conflicting files on GitHub's side that would need merging before your first push.
+Click Create repository.
+
+Step 2 — Add the remote: in terminal
+git remote add origin https://github.com/Neeti0309/LearnAuto.git
+
+Step 3 — Verify it connected correctly:
+git remote -v
+OUTPUT - 
+origin  https://github.com/Neeti0309/LearnAuto.git (fetch)
+origin  https://github.com/Neeti0309/LearnAuto.git (push)
+
+Step 4 — once confirmed, push:
+git push -u origin master
