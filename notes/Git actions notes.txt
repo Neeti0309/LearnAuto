@@ -1,0 +1,8 @@
+Step 1 — Check what's actually changed
+git status
+Step 2 — Stage your changes //This tells Git "include all these changed files in my next commit." (. means "everything in this folder and below.")
+git add .
+Step 3-Check status again: //confirm the same file list shows up staged (green), with nothing unexpected, before you commit.
+git status
+Step 4 - commit
+git commit -m "Initial commit: SauceDemo Playwright framework with POM, fixtures, data-driven tests, and CI workflow"
