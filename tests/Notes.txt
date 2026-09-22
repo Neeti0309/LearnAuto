@@ -1,0 +1,65 @@
+pages/        → Page Objects (how to interact with each page)
+fixtures/     → wires Page Objects into tests automatically
+testData/     → data separated from test logic (JSON)
+tests/        → the actual test files, including one data-driven + tagged
+--------------------------------------------------------------------------------------
+Test.describe----
+
+1. why use test.describe?":
+"It groups related tests logically, gives them a shared label in reports, and lets me run or filter 
+a subset of tests together — like just my login suite."
+
+2. "How do you run a specific subset of tests in Playwright?", here's a clean answer built from 
+what you actually did:
+"I tag test titles with labels like @smoke or @negative, then use npx playwright test --grep '@smoke' 
+to run only tests whose title matches that pattern. This is useful in CI — for example, running a 
+fast @smoke suite on every commit, and a slower full @regression suite only on merges to main."
+--------------------------------------------------------------------------------------------------------
+test.describe grouping + beforeEach-----
+beforeEach becomes test.beforeEach(...) — it's a method on the test object you imported, same as test.describe.
+
+For EVERY test in this file:
+    1. Run beforeEach first (setup — goes to login page)
+    2. Then run the actual test body
+
+--------------------------------------------------------------------------------------------------------
+
+Why would you use headed mode vs headless mode?"
+
+"Headed mode is for debugging — actually watching the browser to understand what's happening. 
+Headless is for CI/CD and everyday runs, since it's faster with no UI rendering overhead. 
+In practice, most automated pipelines run headless."
+-----------------------------------------------------------------------------------------------------
+What happens if you reference a fixture in a test without destructuring it?"
+
+"JavaScript throws a ReferenceError — Playwright fixtures aren't globally available, 
+they only exist inside a test/hook if you explicitly request them by name in the function's parameters."
+
+--------------------------------------------------------------------------------
+Why not just run everything, every time?"
+"Because feedback speed matters during active development — a 5-minute smoke check tells 
+a developer immediately if they broke something obvious, without making them wait 20 minutes 
+for a full regression run on every single commit. The full suite still runs, just at a point 
+where thoroughness matters more than speed — before merging."
+
+The real-world standard (not just theory)
+
+Most professional teams use a layered approach, not an all-or-nothing choice:
+
+Trigger	                        What runs	                Why
+Every push to a branch	        @smoke only	            Fast feedback (~seconds), catches obvious breakage immediately
+Pull request into main	        Full suite	            Before code merges, you want maximum confidence — speed matters less here
+Scheduled (e.g. nightly)        Full suite	            Catches flaky/environment issues even when no one's actively pushing
+
+---------------------------------------------------------------------------------------------
+
+if: github.event_name == 'push'
+
+This is a conditional step — GitHub Actions gives you github.event_name, which tells you why this 
+run was triggered (push vs pull_request). So you write two separate run steps, each guarded by a condition, 
+and only one of them actually executes per run.
+
+Answer
+"I run a fast @smoke suite on every push for quick feedback, and the full regression suite on pull requests 
+before merge, when correctness matters more than speed. I used GitHub Actions' github.event_name to conditionally
+ choose which command runs, so both live in one workflow file rather than duplicating config."

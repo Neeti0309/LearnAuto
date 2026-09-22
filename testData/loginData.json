@@ -1,0 +1,16 @@
+[
+    {
+        "scenario": "valid login",
+        "username": "standard_user",
+        "password": "secret_sauce",
+        "expected": "success",
+        "tag": "@smoke"
+    },
+    {
+        "scenario": "locked out user",
+        "username": "locked_out_user",
+        "password": "secret_sauce",
+        "expected": "locked",
+        "tag": "@negative"
+    }
+]
