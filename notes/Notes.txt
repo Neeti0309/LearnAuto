@@ -63,3 +63,13 @@ Answer
 "I run a fast @smoke suite on every push for quick feedback, and the full regression suite on pull requests 
 before merge, when correctness matters more than speed. I used GitHub Actions' github.event_name to conditionally
  choose which command runs, so both live in one workflow file rather than duplicating config."
+ ------------------------------------------------------------------------------------------------------
+
+ You've now genuinely built and proven, end to end:
+
+POM + fixtures
+External test data (JSON)
+Data-driven forEach tests
+Tags + --grep filtering
+test.describe + beforeEach grouping
+A real branching CI/CD pipeline, pushed to GitHub, verified running correctly
