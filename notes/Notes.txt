@@ -73,3 +73,4 @@ Data-driven forEach tests
 Tags + --grep filtering
 test.describe + beforeEach grouping
 A real branching CI/CD pipeline, pushed to GitHub, verified running correctly
+A three-trigger CI/CD pipeline with reasoned tradeoffs, live on GitHub

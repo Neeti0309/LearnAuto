@@ -6,7 +6,8 @@ export class LoginPage {
         
         this.username = page.getByLabel('Username'); // Username is the element/label on the web page 
         this.password = page.getByLabel('Password'); // password is the element/label on the web page
-        this.loginButton = page.getByRole('button',{ name: 'Login' });
+        //this.loginButton = page.getByRole('button',{ name: 'Login' });
+        this.loginButton = page.getByTestId('login-button'); //loginButton is the element/label on the web page
         this.errorMessage = page.locator('[data-test="error"]');
 
     }
