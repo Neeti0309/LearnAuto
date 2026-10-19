@@ -1,0 +1,49 @@
+Answer 1: “Tell me about a time you debugged a flaky test”
+
+You have two genuinely good real stories. Here’s one, structured the way interviewers expect — 
+Situation → Action → Result:
+“In my personal Playwright framework testing SauceDemo, I had a test using getByLabel('Username')
+ and getByLabel('Password') to locate login fields. Separately, I had a hook using test.beforeEach 
+ that needed the loginPage fixture, but I’d accidentally destructured a different fixture — cartPage — instead. 
+ The test failed with ReferenceError: loginPage is not defined.
+
+Rather than guessing, I read the error carefully — it pointed to the exact line and told me the variable 
+didn’t exist in that scope. I checked which fixtures were destructured in the function parameters versus 
+which ones I was actually using in the function body, found the mismatch, and corrected the destructuring 
+to include loginPage.
+
+The broader lesson I took from it: Playwright fixtures aren’t globally available — each test or hook only 
+has access to what it explicitly destructures. Since then, I always double-check that every fixture I reference 
+in a function body is also requested in its parameters.”
+
+Why this answer works: it’s specific (exact error message), shows a real debugging process 
+(read the error, don’t guess), and ends with a generalized lesson — which is what separates 
+“I fixed a bug” from “I understand why it happened.”
+
+-------------------------------------------------------------------------------------------------------
+Answer 2: “Walk me through your framework”
+“I built a Playwright automation framework in JavaScript testing SauceDemo, structured around the Page Object Model.
+I have a pages folder with classes like LoginPage, HomePage, and CartPage, each holding locators and methods for
+interacting with that page.
+
+Rather than instantiating those classes manually in every test, I use Playwright’s fixture system — I extended 
+the base test object in a testFixtures.js file, so tests just destructure loginPage, homePage, etc., directly, 
+and Playwright handles creating the instances.
+
+Test data is externalized into a JSON file rather than hardcoded — I have scenarios like valid login and locked-out
+login, each with a scenario name, credentials, an expected outcome, and a tag like @smoke or @negative. I loop over
+that array with forEach to generate one test per scenario, so adding a new test case is just adding a JSON object,
+not writing new test code.
+
+For CI/CD, I built a GitHub Actions pipeline with three triggers: on every push, it runs just the @smoke tests for
+fast feedback; on pull requests, it runs the full suite since correctness matters more than speed before a merge; 
+and I added a nightly scheduled run of the full suite to catch any drift on the live site even without code 
+changes.
+
+I also use test.describe with beforeEach hooks to group related tests and share setup, and I rely on Playwright’s
+built-in screenshot, video, and trace capture on failure, since in CI I can’t watch the browser live — the trace
+viewer in particular lets me step through exactly what happened, element by element.”
+
+This is a genuinely strong, complete answer — notice it’s entirely built from real decisions you made and can 
+defend, not memorized buzzwords.
+-------------------------------------------------------------------------------------------------------

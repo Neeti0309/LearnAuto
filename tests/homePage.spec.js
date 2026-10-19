@@ -7,6 +7,8 @@ test.beforeEach(async ({ homePage, loginPage}) => {
 
 test('homepage test', async ({ homePage, loginPage }) => {
     await loginPage.login(loginData[0].username, loginData[0].password);
-    await loginPage.page.pause(1000);
+    await loginPage.page.waitForTimeout(1000);
     await expect(homePage.inventoryContainer).toBeVisible();
+    await homePage.addBackpackToCart.click();
+    await expect(homePage.cartLink).toHaveText('1');
 });

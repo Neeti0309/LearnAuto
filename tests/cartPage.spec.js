@@ -8,8 +8,11 @@ test.beforeEach(async ({ loginPage}) => {
 
 test('cart page test', async ({ loginPage, homePage, cartPage }) => {
     await expect(homePage.inventoryContainer).toBeVisible();
+    await homePage.addBackpackToCart.click();
     await homePage.openCart();
-    await cartPage.page.pause(1000);
+    //await cartPage.page.waitForTimeout(1000);
     await expect(cartPage.page).toHaveURL(/.*\/cart\.html/);
     await expect(cartPage.cartContainer).toBeVisible();
+    await expect(cartPage.inventoryItemName).toHaveText('Sauce Labs Backpack');
+    await expect(cartPage.cartquantity).toHaveText('1');
 });

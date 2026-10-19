@@ -11,7 +11,7 @@ test.describe('Login Data Driven Tests', () => {
 
         test(`Login test - ${data.scenario} ${data.tag}`, async ({ loginPage, homePage }) => {
 
-        await loginPage.login(data.username, data.password);
+        await loginPage.login(data.username, data.password);    
 
         if (data.expected === 'success') {
             await expect(homePage.inventoryContainer).toBeVisible();
@@ -19,9 +19,11 @@ test.describe('Login Data Driven Tests', () => {
 
         if (data.expected === 'locked') {
             await expect(loginPage.errorMessage).toContainText('locked out');
+            await expect(loginPage.username).toBeVisible();
+            await expect(loginPage.password).toBeVisible();
         }
 
-        });
+        }); 
 
     });
 
