@@ -24,7 +24,10 @@ pipeline {
     }
     post {
         always {
-            archiveArtifacts artifacts: 'playwright-report/**', test-results.json, allowEmptyArchive: true
+            archiveArtifacts(
+                artifacts: 'playwright-report/**, test-results.json',
+                allowEmptyArchive: true
+            )
         }
     }
 }
