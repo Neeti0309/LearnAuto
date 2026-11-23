@@ -1,0 +1,19 @@
+[
+    {
+        "scenario": "valid checkout information",
+        "firstName": "Neeti",
+        "lastName": "Mishra",
+        "postalCode": "12345",
+        "expected": "success",
+        "tag": "@smoke"
+    },
+
+    {
+        "scenario": "invalid checkout information",
+        "firstName": "",
+        "lastName": "",
+        "postalCode": "",
+        "expected": "error",
+        "tag": "@negative"
+    }
+]

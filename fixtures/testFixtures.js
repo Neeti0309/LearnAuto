@@ -3,6 +3,7 @@ import { test as base } from '@playwright/test'; //Import Playwright's test, but
 import { LoginPage } from '../pages/loginPage.js'; //This imports the LoginPage class that you created earlier.
 import { HomePage } from '../pages/homePage.js'; //This imports the homePage class that you created earlier.
 import { CartPage } from '../pages/cartPage.js'; //This imports the cartPage class that you created earlier.
+import { CheckOutStepOnePage } from '../pages/checkOutStepOnePage.js'; //This imports the checkOutStepOnePage class that you created earlier.
 
 export const test = base.extend({                //base - This is the original Playwright test that we imported.
                                                 //extend - This is a method that allows us to add new fixtures to the original Playwright test.
@@ -19,6 +20,11 @@ export const test = base.extend({                //base - This is the original P
     cartPage: async ({ page }, use) => {
         const cartPage = new CartPage(page);
         await use(cartPage);
+    },
+
+    checkoutStepOnePage: async ({ page }, use) => {
+        const checkoutStepOnePage = new CheckOutStepOnePage(page);
+        await use(checkoutStepOnePage);
     }
 });
 
