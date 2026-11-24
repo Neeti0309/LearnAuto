@@ -4,7 +4,7 @@ import loginData from '../testData/loginData.json';
 test.describe('Login Data Driven Tests', () => {    //Groups everything inside into one named block, for organized reporting and so a shared beforeEach only applies to this group.
 
     test.beforeEach (async({ loginPage }) => {  //before each test, we will navigate to the login page
-        await loginPage.page.goto('https://www.saucedemo.com/'); //navigate to the login page
+        await loginPage.page.goto('/'); //navigate to the login page
     });
 
     loginData.forEach((data) => {   //for each data set in the loginData.json file, we will run a test

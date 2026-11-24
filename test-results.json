@@ -3,8 +3,7 @@
     "argv": [
       "C:\\Program Files\\nodejs\\node.exe",
       "C:\\Users\\Neeti Mishra\\Neeti\\Udmey Trainings\\JsPlaywright\\scripts\\LearnAuto\\node_modules\\@playwright\\test\\cli.js",
-      "test",
-      "--headed"
+      "test"
     ],
     "configFile": "C:\\Users\\Neeti Mishra\\Neeti\\Udmey Trainings\\JsPlaywright\\scripts\\LearnAuto\\playwright.config.js",
     "rootDir": "C:/Users/Neeti Mishra/Neeti/Udmey Trainings/JsPlaywright/scripts/LearnAuto/tests",
@@ -90,12 +89,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6936,
+                  "duration": 7082,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-23T05:42:54.528Z",
+                  "startTime": "2026-11-24T00:56:42.795Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -141,12 +140,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 8341,
+                      "duration": 6713,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-23T05:42:54.562Z",
+                      "startTime": "2026-11-24T00:56:42.899Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -177,12 +176,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 7893,
+                      "duration": 6674,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-23T05:42:54.560Z",
+                      "startTime": "2026-11-24T00:56:42.899Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -194,6 +193,159 @@
               "file": "checkOutStepOnePage.spec.js",
               "line": 18,
               "column": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "checkoutStepTwoPage.spec.js",
+      "file": "checkoutStepTwoPage.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Checkout Step Two Page",
+          "file": "checkoutStepTwoPage.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Verify Checkout Step Two Page Elements",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 6885,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T00:56:42.853Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff536679c61f1505b38e-cc22db71bc7d04494c0e",
+              "file": "checkoutStepTwoPage.spec.js",
+              "line": 20,
+              "column": 9
+            },
+            {
+              "title": "Verify Checkout Step Two Page Total Calculation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 6987,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T00:56:42.943Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff536679c61f1505b38e-8dcc3f56ffa84a92a83d",
+              "file": "checkoutStepTwoPage.spec.js",
+              "line": 29,
+              "column": 9
+            },
+            {
+              "title": "Verify Finish navigate to checkout complete page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 6815,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T00:56:42.989Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff536679c61f1505b38e-929548584cee8536996f",
+              "file": "checkoutStepTwoPage.spec.js",
+              "line": 51,
+              "column": 9
+            },
+            {
+              "title": "Verify cancel goes back to the inventory page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1871,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-24T00:56:51.360Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ff536679c61f1505b38e-d4fd8d11136e61b77cce",
+              "file": "checkoutStepTwoPage.spec.js",
+              "line": 56,
+              "column": 9
             }
           ]
         }
@@ -218,15 +370,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 9321,
+                  "duration": 2377,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-23T05:42:54.589Z",
+                  "startTime": "2026-11-24T00:56:51.396Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -269,15 +421,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
                       "status": "passed",
-                      "duration": 8827,
+                      "duration": 1533,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-23T05:42:54.556Z",
+                      "startTime": "2026-11-24T00:56:51.492Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -305,15 +457,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 7507,
+                      "duration": 1500,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-23T05:42:54.519Z",
+                      "startTime": "2026-11-24T00:56:51.586Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -333,9 +485,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-23T05:42:53.212Z",
-    "duration": 12945.713,
-    "expected": 6,
+    "startTime": "2026-11-24T00:56:41.649Z",
+    "duration": 12261.472,
+    "expected": 10,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

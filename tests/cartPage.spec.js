@@ -2,7 +2,7 @@ import { test, expect } from '../fixtures/testFixtures';
 import loginData from '../testData/loginData.json';
 
 test.beforeEach(async ({ loginPage}) => {   //before each test, we will navigate to the login page
-    await loginPage.page.goto('https://www.saucedemo.com/');    //navigate to the login page
+    await loginPage.page.goto('/');    //navigate to the login page
     await loginPage.login(loginData[0].username, loginData[0].password);    //login with the first set of credentials from the loginData.json file
 }); 
 

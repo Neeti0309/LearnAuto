@@ -2,7 +2,7 @@ import { test, expect } from '../fixtures/testFixtures';
 import loginData from '../testData/loginData.json';
 
 test.beforeEach(async ({ homePage, loginPage}) => {     //before each test, we will navigate to the login page
-    await loginPage.page.goto('https://www.saucedemo.com/');    //navigate to the login page
+    await loginPage.page.goto('/');    //navigate to the login page
 });
 
 test('homepage test', async ({ homePage, loginPage }) => {  //test to verify that the homepage is displayed after a successful login

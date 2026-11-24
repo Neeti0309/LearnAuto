@@ -5,7 +5,7 @@ import checkoutData from '../testData/cartFillinformation.json'; //This imports 
 test.describe('Checkout Step One Page', () => { //This creates a test suite for the Checkout Step One Page.
     
     test.beforeEach(async ({ loginPage, homePage, cartPage }) => { //This runs before each test in the suite. It logs in and navigates to the cart page.
-        await loginPage.page.goto('https://www.saucedemo.com/'); //This navigates to the login page.
+        await loginPage.page.goto('/'); //This navigates to the login page.
         await loginPage.login(loginData[0].username, loginData[0].password); //This logs in using the login method from the loginPage class.
         await homePage.addBackpackToCart.click(); //This clicks the "Add to Cart" button for the backpack item on the home page.
         await homePage.addBikeLightToCart.click(); //This clicks the "Add to Cart" button for the bike light item on the home page.
